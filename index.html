@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>未来地図_妄想</title>
+<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<script>
+  // issue javascript 分離
+  function clickLangButton() {
+	const language = document.form1.player_language;
+	var titles = ["仮想都市", "VirtualCity", "虚拟城市"];
+	var languageTitles = ["日本語", "English", "中国人"];
+	var vrfirsts = ["VR施設1", "vr facility first", "VR设施1"];
+	var vrseconds = ["VR施設2", "vr facility second", "VR设施2"];
+	var vrthirds = ["VR施設3", "vr facility third", "VR设施3"];
+	var stamps = ["スタンプラリー", "Stamp Rally", "邮票集会"];
+
+	var changes = ["言語切替", "Language switching", "语言切换"];
+
+	console.log(language);
+
+	var lang = language.selectedIndex;
+	console.log(language.options);
+	console.log(lang);
+	console.log(titles);
+	document.getElementById("title").innerHTML = titles[lang];
+	document.getElementById("playerLanguageButton").innerHTML =
+	  languageTitles[lang];
+	document.getElementById("playerLanguageTitle").innerHTML =
+	  languageTitles[lang];
+
+	document.getElementById("vrfirst").innerHTML = vrfirsts[lang];
+	document.getElementById("vrsecond").innerHTML = vrseconds[lang];
+	document.getElementById("vrthird").innerHTML = vrthirds[lang];
+	document.getElementById("stamp").innerHTML = changes[lang];
+  }
+</script>
+	
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Navigation -->
+  <header> <a href="">
+    <h4 class="logo">未来地図トップ</h4>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#hero">HOME</a></li>
+        <li><a href="#vlog">vlog</a></li>
+        <li> <a href="#autofeature">autofeature</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h2 class="hero_header">FEATURE <span class="light">MAP</span></h2>
+    <p class="tagline">my sf and hightech feature image site</p>
+  </section>
+  <!-- About Section -->
+  <section class="about" id="about">
+	  <h2 class="">VlogContents</h2>
+	  <h3></h3>
+    <p class="text_column"><iframe width="400" height="315" src="https://www.youtube.com/embed/Qe15GxeAOSM?start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+    <p class="text_column"><iframe width="400" height="315" src="https://www.youtube.com/embed/RDCMtJ22y9U?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>    
+  </section>
+	<section class="autofeature">
+
+	<h3>feature grass image</h3>
+	<p class="text_column"><iframe width="400" height="315" src="https://www.youtube.com/embed/Vm6xZAo2u5Q?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </p>
+	 <p class="text_column">
+		  <iframe width="400" height="315" src="https://www.youtube.com/embed/jzSeHBoxjfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</p>
+	</section>
+  <!-- Stats Gallery Section -->
+  <div class="gallery">
+    <div class="thumbnail">
+      <h4>TITLE</h4>
+      <p>
+		<h2>digital animal1.0</h2>
+		<div
+		  style="
+			position: relative;
+			height: 0;
+			padding-bottom: 81.97%;
+			overflow: hidden;
+		  "
+		>
+		  <iframe
+			style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+			src="https://makecode.microbit.org/---run?id=_ikscmqFgTR6k"
+			allowfullscreen="allowfullscreen"
+			sandbox="allow-popups allow-forms allow-scripts allow-same-origin"
+			frameborder="0"
+		  ></iframe>
+		</div>  
+	  </p>
+	</div>
+	<div id="app">
+      <h1 id="title">Virtual City</h1>
+      <form name="form1">
+        <div id="playerLanguageTitle"></div>
+        <select id="playerLanguage" name="player_language">
+          <option name="ja_lang">日本語</option>
+          <option name="en_lang">English</option>
+          <option name="ch_lang">中国語</option>
+        </select>
+      </form>
+      <input
+        type="button"
+        id="playerLanguageButton"
+        value="言語切り替え"
+        onclick="clickLangButton()"
+      />
+      <div>
+        <a id="vrfirst" href="vr1.html">VR1施設</a><br />
+        <a id="vrsecond" href="vr2.html">VR2施設</a><br />
+        <a id="vrthird" href="vr3.html">VF3施設</a><br />
+        <a id="stamp" href="stamp.html">スタンプラリー情報</a><br />
+        <!-- スタンプラリー用のQRコード組み込み-->
+        <a id="macpro_buy" href="macpro_buy.html">妄想パソコン購入</a><br />
+        <a id="hololens2_buy" href="hololens2_buy.html">現実拡張メガネ購入</a>
+      </div>
+    </div>
+  </div>
+  <!-- Parallax Section -->
+  <section class="banner">
+    <h2 class="parallax">PARALLAX HERO</h2>
+    <p class="parallax_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+  </section>
+  <!-- More Info Section -->
+  <footer>
+    <article class="footer_column">
+      <h3>ABOUT</h3>
+      <img src="images/placeholder.jpg" alt="" width="400" height="200" class="cards"/>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
+    </article>
+    <article class="footer_column">
+      <h3>LOCATION</h3>
+      <img src="images/placeholder.jpg" alt="" width="400" height="200" class="cards"/>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
+    </article>
+  </footer>
+  <!-- Footer Section -->
+  <section class="footer_banner" id="contact">
+    <h2 class="hidden">Footer Banner Section </h2>
+    <p class="hero_header">FOR THE LATEST NEWS &amp; UPDATES</p>
+    <div class="button">subscribe</div>
+  </section>
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2021- <strong>Light Theme</strong></div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>
