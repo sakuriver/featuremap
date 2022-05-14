@@ -122,7 +122,7 @@ ul li:hover a {
 */
 	padding-bottom: 35px;
 	padding-top: 0px;
-	margin-top: -5px;
+	margin-top: 30px;
 	margin-bottom: 0px;
 }
 .thumbnail {
@@ -257,6 +257,24 @@ footer {
 }
 .hidden {
 	display: none;
+	transition: 0.3s;
+}
+
+details {
+	border: 2px solid #060202;
+	border-radius: 3px;
+}
+
+summary:hover {
+	cursor:pointer;
+	background-color: #dddddd;
+}
+
+
+discussion_result {
+	background-color: aqua;
+	border-radius: 4px;
+	border: 3px solid #D04F14;
 }
 
 /* Mobile */

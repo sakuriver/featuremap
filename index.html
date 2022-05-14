@@ -6,10 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>未来地図_妄想</title>
 <link href="css/singlePageTemplate.css?versiion=1" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.dialog.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.resizable.min.css" rel="stylesheet" type="text/css">
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.dialog.min.js"></script>
 <script>var __adobewebfontsappname__="dreamweaver"</script>
 <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
 <script>
+  $(document).ready(function() {
+	 $("#about-dialog").hide();
+	 $("#about").click(function{
+	 	$("about-dialog").show();
+	 });
+  });
   // issue javascript 分離
   function clickLangButton() {
 	const language = document.form1.player_language;
@@ -58,18 +70,21 @@
     <nav>
       <ul>
         <li><a href="#hero">HOME</a></li>
-        <li><a href="#vlog">vlog</a></li>
-        <li> <a href="#autofeature">autofeature</a></li>
+        <li><a id="about">about</a></li>
+		<li><a href="#vlog">vlog</a></li>
+		<li><a href="#citydiscussion">city discussiion result</a></li>
+		<li> <a href="#autofeature">autofeature</a></li>
       </ul>
     </nav>
   </header>
   <!-- Hero Section -->
   <section class="hero" id="hero">
-    <h2 class="hero_header">FEATURE <span class="light">MAP</span></h2>
+    <div id="about-dialog">feature map version 0.1</div>
+<h2 class="hero_header">FEATURE <span class="light">MAP</span></h2>
     <p class="tagline">my sf and hightech feature image site</p>
   </section>
   <!-- About Section -->
-  <section class="about" id="about">
+  <section class="vlog" id="vlog">
 	  <h2 class="">VlogContents</h2>
 	  <h3></h3>
     <p class="text_column"><iframe width="400" height="315" src="https://www.youtube.com/embed/Qe15GxeAOSM?start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
@@ -81,14 +96,44 @@
 	<p class="text_column"><iframe width="400" height="315" src="https://www.youtube.com/embed/Vm6xZAo2u5Q?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </p>
 	 <p class="text_column">
 		  <iframe width="400" height="315" src="https://www.youtube.com/embed/jzSeHBoxjfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</p>
-	</section>
+	  </p>
+  </section>
+  <section class="citydiscussion" id="citydiscussion">
+	  <h2>web3でのディスカッション結果スレッドイメージです(feature web3 discussion thread image design)</h2>
+	  <details>
+		  <summary>水道料金がお得になりました。 詳細</summary>
+		  <div class="discussion_result">
+			 <p> 承認団体 : ネルフの御影 American Yellow  </p>
+			 <p>承認時ブロック承認ウォレット 112133445565999 </p>
+			 <p> <a href="#">承認時データ</a></p>
+			 <p> 日付 : 2030.05.18 この度水道料金が月々300円安くなります </p>
+	      </div>
+	  </details>		  
+	  <details>
+		  <summary>2050年国際競技結果 詳細</summary>
+		  <div class="discussion_result">
+			 <p> 承認団体 : 国際宇宙連合 スポールツール策定委員会 GlobalSpaceTeam WhiteDreamHouse</p>
+			 <p>承認時ブロック承認ウォレット 11213344599 </p>
+			 <p> <a href="#">承認時データ</a></p>
+			 <p> 宇宙連合の決済情報が採択されて、この度宇宙を超えた競技を開始します </p>	      
+		  </div>
+	  </details>
+	  <details>
+		  <summary>2045年シンギュラリティ 詳細</summary>
+		  <div class="discussion_result">
+			 <p> 承認団体 : 国際宇宙連合 スポールツール策定委員会 GlobalSpaceTeam WhiteDreamHous</p>
+			 <p>承認時ブロック承認ウォレット 11213399 </p>
+			 <p> <a href="#">承認時データ</a></p>
+			 <p> この度AIが中学生程度に到達したことを報告いたします。  </p>	      
+		  </div>
+      </details>
+  </section>
   <!-- Stats Gallery Section -->
   <div class="gallery">
     <div class="thumbnail">
       <h4>TITLE</h4>
       <p>
-		<h2>digital animal1.0</h2>
+	  <h2>digital animal1.0</h2>
 		<div
 		  style="
 			position: relative;
@@ -164,5 +209,10 @@
   <div class="copyright">&copy;2021- <strong>Light Theme</strong></div>
 </div>
 <!-- Main Container Ends -->
+<script type="text/javascript">
+$(function() {
+	$( "#Dialog1" ).dialog(); 
+});
+</script>
 </body>
 </html>
